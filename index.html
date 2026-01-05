@@ -1,0 +1,13 @@
+<title>Atherial</title>
+<h1>Apply For Staff</h1>
+<form>
+<input placeholder="Nickname" required>
+<textarea placeholder="Why do you want to apply?" required></textarea>
+<button>Submit</button>
+</form>
+<script>
+  document.querySelector("form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    alert("Application rejected");
+  });
+</script>
