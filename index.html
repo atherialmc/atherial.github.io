@@ -6,13 +6,20 @@
 <button>Submit</button>
 </form>
 <p id="info" style="color: #f00"></p>
-<img src="https://i.ibb.co/B53z2ZL0/loch-dih-monster.jpg" alt="loch-dih-monster" border="0">
+<img src="https://i.ibb.co/B53z2ZL0/loch-dih-monster.jpg" alt="loch-dih-monster" border="0" style="opacity: 0;", id="coolImage">
 
 <script>
   document.querySelector("form").addEventListener("submit", function (e) {
     e.preventDefault();
     document.getElementById("info").textContent = "Application rejected";
+    const img = document.getElementById("coolImage");
+    document.querySelector("button").disabled = true;
+    img.style.opacity = 1;
+    setTimeout(() => {
+      img.style.opacity = 0;
+      document.getElementById("info").textContent = "";
+      document.querySelector("button").disabled = false;
+    }, 500);
   });
 </script>
-
 
